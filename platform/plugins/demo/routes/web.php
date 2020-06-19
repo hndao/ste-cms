@@ -12,6 +12,15 @@ Route::group(['namespace' => 'Botble\Demo\Http\Controllers', 'middleware' => 'we
                 'permission' => 'demo.destroy',
             ]);
         });
+
+        Route::group(['prefix' => 'categories', 'as' => 'category.'], function () {
+            Route::resource('', 'CategoryController')->parameters(['' => 'category']);
+            Route::delete('items/destroy', [
+                'as'         => 'deletes',
+                'uses'       => 'CategoryController@deletes',
+                'permission' => 'categories.destroy',
+            ]);
+        });
     });
 
 });
