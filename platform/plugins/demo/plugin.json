@@ -1,0 +1,9 @@
+{
+    "name": "Demo",
+    "namespace": "Botble\\Demo\\",
+    "provider": "Botble\\Demo\\Providers\\DemoServiceProvider",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "version": "1.0",
+    "description": "The description for module demo"
+}
